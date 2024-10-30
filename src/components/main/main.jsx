@@ -32,13 +32,14 @@ function Main() {
     return (
         <div id="main" className="flex-1 min-h-screen pb-[20vh] relative">
             {/* Navbar */}
-            <div id="nav" className="flex items-center p-4 justify-between text-Navtext text-2xl fixed top-0 left-0 w-full z-10">
-                <p id="name" className="md:block hidden">Gemini</p>
+            <div id="nav" className="flex items-center p-4 justify-between text-Navtext text-2xl position: fixed;
+">
+                <p id="name">Gemini</p>
                 <img src={assets.user_icon} alt="" className="w-10 rounded-full" />
             </div>
 
             {/* Main Container */}
-            <div id="main-container" className="max-w-[900px] mx-auto mt-[80px] md:mt-[90px]">
+            <div id="main-container" className="max-w-[900px] mx-auto">
                 {/* Greeting Section */}
                 {!showResult ? (
                     <>
@@ -73,6 +74,7 @@ function Main() {
                                 </div>
                             ))}
                         </div>
+
                     </>
                 ) : (
                     <div id="result" className="px-0 py-20 max-h-[70vh] overflow-y-scroll no-scrollbar">
@@ -83,7 +85,7 @@ function Main() {
                         <div id="result-data" className="flex items-start gap-5">
                             <img src={assets.gemini_icon} alt="" className="w-10 rounded-full" />
                             {loading ? (
-                                <div id="loader" className="w-full flex gap-2.5 flex-col">
+                                <div id="loader" className="w-full flex gap-2.5 flex-col ">
                                     {[...Array(3)].map((_, idx) => (
                                         <hr
                                             key={idx}
@@ -106,7 +108,8 @@ function Main() {
                 )}
 
                 {/* Search Box and Footer */}
-                <div id="main-bottom" className="absolute bottom-0 w-full max-w-[900px] m-auto px-0 py-4 fixed z-10">
+                <div id="main-bottom" className="absolute bottom-0 w-full max-w-[900px] m-auto px-0 py-4 position: fixed z-10	;
+">
                     <div id="search-box" className="flex items-center justify-between gap-5 bg-Cardbg py-1.5 px-5 rounded-full">
                         <textarea
                             placeholder="Enter a prompt here"
@@ -131,10 +134,13 @@ function Main() {
             <style jsx>{`
                 @media (max-width: 768px) {
                     #nav {
-                        position: fixed;
-                        top: 30px;
-                        width: 100%;
-                        z-index: 10;
+                        
+                         position: fixed;
+                         top: 30px;
+                         width: 100%;
+                         z-index: 10;
+                        
+                       
                     }
 
                     #main-bottom {
@@ -144,26 +150,24 @@ function Main() {
                         padding: 0 16px;
                         z-index: 10;
                     }
-
-                    #result-text {
-                        margin-right: 12px;
-                    }
-
-                    #loader {
-                        width: 78%;
-                    }
-
-                    #result {
-                        padding: 2rem 8px;
-                    }
-
-                    #main-container {
-                        margin-top: 90px;
-                    }
-
-                    #name {
-                        visibility: hidden;
-                    }
+                        #result-text{
+                      margin-right: 12px;
+                        }
+                      #loader{
+                      width:78%
+                      }
+                      #result{
+                          padding-left: 8px;
+                          padding-right: 8px;
+                          padding-top: 2rem;
+                          padding-bottom: 2rem;
+                      }
+                          #main-container{
+                      margin-top: 90px;
+                      }
+                      #name{
+                      visibility: hidden;
+                      }
                 }
             `}</style>
         </div>
