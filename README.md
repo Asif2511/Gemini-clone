@@ -20,10 +20,11 @@ A simple and elegant web application inspired by the Gemini interface. This proj
 
 ## Technologies Used
 
-- **React**: JavaScript library for building user interfaces.
-- **CSS**: Styling for the application layout and components.
-- **Context API**: State management to handle global state across components.
-- **Custom Assets**: Use of custom icons and images for a personalized touch.
+- **React**: A JavaScript library for building user interfaces, enabling efficient rendering and component-based architecture.
+- **CSS**: Applied for styling the application layout and enhancing component appearances.
+- **Context API**: Utilized for global state management, facilitating communication between components without prop drilling.
+- **Custom Assets**: Incorporated custom icons and images to give the application a personalized touch.
+- **HTML**: Served as the foundational markup language to create the structure of the website.
 
 ## Installation
 
